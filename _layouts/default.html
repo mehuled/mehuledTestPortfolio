@@ -1,85 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include header.html %}
 
-  {% include head.html %}
+    {% include title-group.html %}
 
-  <body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
 
-    <div class="row">
-      <div class="large-12 large-centered columns">
+                    {% for post in paginator.posts %}
+                      {% include tile.html %}
+                    {% endfor %}
 
-        <header class="masthead">
-          <img src="{{ site.baseurl }}/public/profile.jpg" alt="Jami Gibbs">
-        </header>
+                    {% include pagination.html %}
 
-    </div>
-  </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-  <div class="row">
-
-    <div class="large-6 large-offset-3 columns">
-
-      <div class="content-section">
-
-        <p>
-Hello, there. I’m Mehul Sharma,
-<br> A <b>Computer science sophomore</b> at <br> <b>The LNM Institute Of Information Technology, Jaipur</b>. I love to code and solve problems that are best solved by the advances in computer science.</p> <p> My curiosity has made me to dive in <b>JAVA, Javascript, Python, Android and a bit of Machine Learning</b>. I am constantly looking to learn and work on technologies that can makes lives easier for millions. Open Source also excites me and I am constanly thinking of ideas to start the next big open source project, as I alone can do little while we all can do it all.
-        </p>
-
-        <p>
-In my spare time I like to listen to some Music ranging from Queens to Arctic Monkeys, Play football and roam around.
-        </p>
-
-        <p>
-I’m currently open to lending my brain to learn and to use and help making a difference.
-        </p>
-
-      </div>
-
-      <main>
-        <h1>My Projects</h1>
-        {% for post in site.posts %}
-          <div class="project-post">
-            <h3><a href="{{ post.git }}">{{ post.title }}</a></h3>
-            {{ post.content }}
-          </div>
-        {% endfor %}
-      </main>
-
-      <footer>
-        <h2>Contact Me</h2>
-
-        <p>
-        Send me an <a href="mailto:mehulcse0209@gmail.com?Subject=Hello,%20Mehul!">email</a> or ping me on <a href="https://www.facebook.com/mehulsharma09">Facebook</a>. See me on <a href="https://github.com/mehuled">Github</a>.
-        </p>
-
-        <p class="copyright">
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-        </p>
-      </footer>
-
-    </div>
-
-    <div class="large-2 large-offset-1 columns social">
-      <ul>
-        <li><a href="https://facebook.com/{{ site.twitter }}"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://github.com/{{ site.github }}"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://instagram.com/{{ site.instagram }}"><i class="fa fa-instagram"></i></a></li>
-      </ul>
-    </div>
-
-  </div>
-
-    {% if site.google_analytics %}
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-       ga('create', '{{ site.google_analytics }}', 'auto');
-       ga('send', 'pageview');
-     </script>
-    {% endif %}
-
-  </body>
-</html>
+{% include footer.html %}
