@@ -1,24 +1,36 @@
-# Site settings
-title: Jim Myhrberg (jimeh)
-person_name: Jim Myhrberg
-person_nickname: jimeh
-email: pbagnpg\100wvzru\056zr
-mailto: "&#109;&#97;&#105;&#108;&#116;&#111;&#58;%63%6s%6r%74%61%63%74@%6n%69%6q%65%68.%6q%65"
-description: Crazy-Ass Software Engineering Mercenary
-baseurl: "" # the subpath of your site, e.g. /blog/
-hostname: jimeh.me # used to determine if google analytics should be triggered
-url: http://jimeh.me # the base hostname & protocol for your site
-permalink: /:title/
+# Permalinks
+permalink:           pretty
 
-blog_url: https://jimeh.io/
-cv_url: http://assets.jimeh.me/jim-myhrberg-cv.pdf
-vcard_url: http://assets.jimeh.me/jim-myhrberg.vcf
-twitter_username: jimeh
-github_username: jimeh
-linkedin_username: jimeh
-facebook_username: jimeh
-flickr_username: jimeh
-lastfm_username: jimeh
+# Setup
+title:               Mehul Sharma
+tagline:             Computer science Sophomore from The LNM Institute Of Information Technology Jaipur .
+url:                 http://mehuled.github.io
+paginate:            1
+baseurl:             ""
 
-# Build settings
-markdown: kramdown
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Mehul Sharma
+  url:               https://twitter.com/jamigibbs
+  email:             mehulcse0209@gmail.com
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/jamigibbs/portfolio
+google_analytics:    UA-3363703-15
+twitter:             jamigibbs
+github:              jamigibbs
+dribbble:            jamigibbs
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
